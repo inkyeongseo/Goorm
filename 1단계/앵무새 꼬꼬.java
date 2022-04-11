@@ -13,16 +13,19 @@ class Main {
 			StringBuilder sb = new StringBuilder();
 			for(int j = 0; j < text[i].length(); j++){
 				char ch = text[i].charAt(j);
-				if(ch == 'a'|| ch == 'e'||ch == 'i'||ch == 'o'||ch == 'u'){
+				if(ch == 'a'|| ch == 'e'||ch == 'i'||ch == 'o'||ch == 'u'||ch == 'A'|| ch == 'E'||ch == 'I'||ch == 'O'||ch == 'U'){
 					sb.append(ch);
 				}
 			}
 			list.add(sb);
 		}
-		
-		// System.out.println(list.size());
+	
 		for(int i = 0; i < list.size(); i++){
-			System.out.println(list.get(i));
+			if(list.get(i).length() == 0){
+				System.out.println("???");
+			}else{
+				System.out.println(list.get(i));
+			}
 		}
 	}
 }
